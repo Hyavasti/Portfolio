@@ -1,10 +1,11 @@
+import { ArrowUpRight } from "lucide-react";
 import { EXPERIENCE } from "../data/portfolioData";
 
-export default function Experience() {
+export default function Experience({ onSelectProject }) {
   return (
-    <section id="experience" className="py-12 border-b border-zinc-200 dark:border-zinc-800">
+    <section id="experience" className="py-10">
       <h2 className="text-xs font-mono uppercase tracking-wider text-zinc-500 dark:text-zinc-400 mb-6">
-        03 — education & engineering background
+        04 — experience & engineering milestones
       </h2>
 
       <div className="space-y-6">
@@ -17,9 +18,22 @@ export default function Experience() {
               {item.period}
             </div>
             <div>
-              <h3 className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-                {item.role}
-              </h3>
+              <div className="flex flex-wrap items-center justify-between gap-2">
+                <h3 className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+                  {item.role}
+                </h3>
+
+                {item.projectId && onSelectProject && (
+                  <button
+                    onClick={() => onSelectProject(item.projectId)}
+                    className="inline-flex items-center gap-1 text-[11px] font-mono text-emerald-600 dark:text-emerald-400 hover:underline underline-offset-4 cursor-pointer"
+                  >
+                    <span>View Specs</span>
+                    <ArrowUpRight className="w-3 h-3" />
+                  </button>
+                )}
+              </div>
+
               <div className="text-xs font-mono text-zinc-500 dark:text-zinc-400 mt-0.5">
                 {item.org}
               </div>

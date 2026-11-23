@@ -1,9 +1,9 @@
 import { ArrowUpRight } from "lucide-react";
 import { PROFILE } from "../data/portfolioData";
 
-export default function Hero() {
+export default function Hero({ onNavigate }) {
   return (
-    <section className="pt-16 pb-12 border-b border-zinc-200 dark:border-zinc-800">
+    <section className="pt-10 pb-12">
       <div className="inline-flex items-center gap-2 px-2.5 py-1 mb-6 text-xs font-mono rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-700 dark:text-emerald-400">
         <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
         {PROFILE.availability}
@@ -33,13 +33,14 @@ export default function Hero() {
             <ArrowUpRight className="w-3.5 h-3.5" />
           </a>
         ))}
-        <a
-          href="#contact"
-          className="inline-flex items-center gap-1 text-zinc-700 dark:text-zinc-300 hover:text-zinc-950 dark:hover:text-white underline underline-offset-4 decoration-zinc-300 dark:decoration-zinc-700"
+
+        <button
+          onClick={() => onNavigate?.("contact")}
+          className="inline-flex items-center gap-1 text-zinc-700 dark:text-zinc-300 hover:text-zinc-950 dark:hover:text-white underline underline-offset-4 decoration-zinc-300 dark:decoration-zinc-700 cursor-pointer"
         >
           email
           <ArrowUpRight className="w-3.5 h-3.5" />
-        </a>
+        </button>
       </div>
 
       <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-3">
@@ -48,8 +49,12 @@ export default function Hero() {
             key={item.label}
             className="p-3.5 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-900/40"
           >
-            <div className="text-xs font-mono text-zinc-500 dark:text-zinc-400">{item.label}</div>
-            <div className="mt-1 text-sm font-medium text-zinc-900 dark:text-zinc-100">{item.sub}</div>
+            <div className="text-xs font-mono text-zinc-500 dark:text-zinc-400">
+              {item.label}
+            </div>
+            <div className="mt-1 text-sm font-medium text-zinc-900 dark:text-zinc-100">
+              {item.sub}
+            </div>
           </div>
         ))}
       </div>
