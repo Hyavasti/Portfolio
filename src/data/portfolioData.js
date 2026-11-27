@@ -8,7 +8,10 @@ export const PROFILE = {
   email: "joserodrigo.saludo@gmail.com",
   socials: [
     { label: "github", url: "https://github.com/Hyavasti" },
-    { label: "linkedin", url: "https://www.linkedin.com/in/jose-rodrigo-saludo-7a0222270/" },
+    {
+      label: "linkedin",
+      url: "https://www.linkedin.com/in/jose-rodrigo-saludo-7a0222270/",
+    },
   ],
   highlights: [
     { label: "STI College Las Piñas", sub: "BS Information Technology" },
@@ -76,7 +79,8 @@ export const PROJECTS = [
       "Supabase",
     ],
     github: "https://github.com/Hyavasti/MWPCTracker",
-    apkUrl: "https://drive.google.com/file/d/1B8Z_V6TyMRWTg0Ou67LUIRWXg4Ljontx/view?usp=sharing",
+    apkUrl:
+      "https://drive.google.com/file/d/1B8Z_V6TyMRWTg0Ou67LUIRWXg4Ljontx/view?usp=sharing",
     pairedProject: {
       id: "mwpc-web",
       label: "Connected Web Platform",
@@ -100,7 +104,36 @@ export const PROJECTS = [
     ],
     stack: ["Kotlin", "Jetpack Compose", "Supabase", "PostgreSQL", "OSMDroid"],
     github: "https://github.com/Hyavasti/MotoPulse",
-    apkUrl: "https://drive.google.com/file/d/1F9gCyebcV-NYsE0uZdO8Z00GTUDr_xp6/view?usp=sharing",
+    apkUrl:
+      "https://drive.google.com/file/d/1F9gCyebcV-NYsE0uZdO8Z00GTUDr_xp6/view?usp=sharing",
+  },
+  {
+    id: "moki-ai",
+    shortTitle: "Moki AI",
+    category: "Android",
+    badge: "Native Android · Voice AI · APK",
+    title: "Moki AI — On-Device Voice Assistant & OS Automation",
+    summary:
+      "A J.A.R.V.I.S.-inspired native Android voice assistant built with Kotlin and Jetpack Compose featuring hands-free wake-word detection, natural language intent parsing, and automated Messenger dispatch.",
+    problem:
+      "Standard mobile assistants struggle with custom multi-step personal workflows—such as hands-free messaging specific contacts via third-party apps without unlocking or navigating nested UI screens while riding or multitasking.",
+    architecture: [
+      "Engineered an always-listening wake-word pipeline and low-latency speech-to-text / text-to-speech loop running natively on Android.",
+      "Built a deterministic intent-routing engine paired with LLM fallback to parse conversational commands into structured OS actions.",
+      "Implemented Android Accessibility Services and automated UI-tree traversal to resolve priority contacts and dispatch Facebook Messenger messages hands-free.",
+      "Designed a minimalist, low-distraction Jetpack Compose HUD with real-time audio state feedback and permission lifecycle management.",
+    ],
+    stack: [
+      "Kotlin",
+      "Jetpack Compose",
+      "Android SDK",
+      "Accessibility Service",
+      "Speech-to-Text",
+      "Gemini API",
+    ],
+    github: "https://github.com/Hyavasti/Moki-AI",
+    apkUrl:
+      "https://drive.google.com/file/d/1iZipSFavEap5WL8zyI3610O5iJWif_G6/view?usp=sharing",
   },
   {
     id: "cafe-uno",
@@ -135,7 +168,14 @@ export const PROJECTS = [
       "React + Vite web interface backed by Neon serverless PostgreSQL to organize generated clips by source YouTube URL.",
       "Built-in multi-platform upload scheduler queue for TikTok, YouTube Shorts, and Facebook Reels.",
     ],
-    stack: ["Python", "Local AI / Whisper", "React", "Vite", "Neon PostgreSQL", "FFmpeg"],
+    stack: [
+      "Python",
+      "Local AI / Whisper",
+      "React",
+      "Vite",
+      "Neon PostgreSQL",
+      "FFmpeg",
+    ],
     github: "https://github.com/Hyavasti/ClipDeck",
     liveUrl: "https://clip-deck-mu.vercel.app/",
   },
@@ -154,7 +194,14 @@ export const PROJECTS = [
       "Backed by Neon serverless PostgreSQL for persistent match records, win-rate tracking, and real-time overlay state updates.",
       "Integrated Supabase Storage to serve optimized commander artwork, synergy badges, and custom visual assets with low latency.",
     ],
-    stack: ["React", "Vite", "Tailwind CSS", "Neon PostgreSQL", "Supabase Storage", "OBS Studio"],
+    stack: [
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "Neon PostgreSQL",
+      "Supabase Storage",
+      "OBS Studio",
+    ],
     github: "https://github.com/Hyavasti/magic-chess-overlay",
     liveUrl: "https://magic-chess-overlay-gkrw.vercel.app/",
   },
@@ -163,19 +210,54 @@ export const PROJECTS = [
 export const STACK_GROUPS = [
   {
     category: "Mobile & Frontend",
-    items: ["Kotlin", "Jetpack Compose", "React", "Vite", "JavaScript (ES6+)", "HTML5 / CSS3", "Tailwind CSS"],
+    items: [
+      "Kotlin",
+      "Jetpack Compose",
+      "Android SDK",
+      "Accessibility Service",
+      "Speech-to-Text",
+      "React",
+      "Vite",
+      "JavaScript (ES6+)",
+      "HTML5 / CSS3",
+      "Tailwind CSS",
+    ],
   },
   {
     category: "Backend & Databases",
-    items: ["Node.js", "Express.js", "Python", "PostgreSQL", "Supabase (RLS / Auth)", "Firebase Realtime DB", "Neon"],
+    items: [
+      "Node.js",
+      "Express.js",
+      "Python",
+      "Gemini API",
+      "PostgreSQL",
+      "Supabase (RLS / Auth)",
+      "Firebase Realtime DB",
+      "Neon",
+    ],
   },
   {
     category: "Cloud, Tools & Hardware",
-    items: ["AWS", "Git & GitHub", "REST APIs", "PayMongo API", "OSMDroid / Leaflet", "Arduino / C++"],
+    items: [
+      "AWS",
+      "Git & GitHub",
+      "REST APIs",
+      "PayMongo API",
+      "OSMDroid / Leaflet",
+      "Arduino / C++",
+    ],
   },
 ];
 
 export const EXPERIENCE = [
+  {
+    period: "Nov 2026",
+    role: "Android Developer — Moki AI Voice Assistant",
+    org: "On-Device Voice AI & OS Automation",
+    projectId: "moki-ai",
+    details:
+      "Architected and built a custom native Android voice assistant using Kotlin and Jetpack Compose with wake-word activation, conversational intent routing, and automated Accessibility-driven Messenger workflows.",
+  },
   {
     period: "Nov 2026",
     role: "Full-Stack Developer — MCGGTracker Stream Overlay",
@@ -260,13 +342,18 @@ export const CERTIFICATES = [
   },
   {
     id: "sti-leadership-award",
-    title: "Leadership Award — National Service Training Program 2 (AY 2023–2024)",
+    title:
+      "Leadership Award — National Service Training Program 2 (AY 2023–2024)",
     issuer: "STI College Las Piñas",
     date: "June 22, 2024",
     type: "Leadership & Recognition",
     credentialId: null,
     driveId: "1CVd8dT6euorao31QeEcne8-Z-ymkJU2H",
-    skills: ["Team Leadership", "Community Program Execution", "Project Coordination"],
+    skills: [
+      "Team Leadership",
+      "Community Program Execution",
+      "Project Coordination",
+    ],
   },
   {
     id: "oracle-java",
@@ -280,7 +367,8 @@ export const CERTIFICATES = [
   },
   {
     id: "sti-active-marketer",
-    title: "Certificate of Recognition — Most Active Marketer (The Entrepreneurial Mind Expo 2023)",
+    title:
+      "Certificate of Recognition — Most Active Marketer (The Entrepreneurial Mind Expo 2023)",
     issuer: "STI College Las Piñas · Management Department",
     date: "December 9, 2023",
     type: "Product & Business",
